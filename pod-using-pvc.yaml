@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name:  pvc-tets-pod
+spec:
+  containers:
+    - name: app
+      image: nginx
+      command: ["/bin/sh", "-c", "sleep 3000"]
+      volumeMounts:
+        - name: my-storage
+          mountPath: /data
+  volumes:
+    - name: my-storage
+      persistentVolumeClaim:
+        claimName: static-pvc-demo
+
