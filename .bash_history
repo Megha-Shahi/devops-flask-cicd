@@ -154,3 +154,46 @@ kubectl get pods -n kube-system | grep ebs
 kubectl logs -n kube-system ebs-csi-controller-6dd584678b-9k4nl -c ebs-plugin
 kubectl get nodes -o wide
 curl -k https://172.31.45.134:10250/healthz
+mkdir k8s
+vi k8s/deployment.yaml
+vi k8s/service.yaml
+kubectl apply -f k8s/
+kubectl get pods
+kubectl delete pod ebs-test-pod
+kubectl get pods
+kubectl get svc
+kubectl get pods -o wide
+kubectl get svc
+kubectl get deployment
+kubectl get pods -o wide
+kubectl get svc
+curl http://localhost:30080/health
+curl http://localhost:30080
+git add k8s/deployment.yaml k8s/service.yaml
+git init
+git add k8s/deployment.yaml k8s/service.yaml
+git status
+git commit -m "Add Kubernetes manifests for Flask app"
+gi push
+git push
+git remote add origin https://github.com/Megha-Shahi/devops-flask-cicd
+git push
+git push --set-upstream origin master
+git push
+git branch
+git branch -m main
+git branch
+git push
+git push --set-upstream origin main
+git pull
+git push
+git push origin HEAD
+git pull
+git push
+git branch
+git push --set-upstream origin main
+git push
+git push origin HEAD:main
+git status
+git add .
+git commit -m "Add Kubernetes manifests"
